@@ -31,7 +31,18 @@
             <div class="intro-text">
                 <h2>¿Quieres realizar tus transacciones bancarias?</h2>
                 <p>En AppBank te ofrecemos una plataforma digital donde encontraras las herramientas que necesitas para realizar diferentes operaciones sobre las cuentas que posees en el banco.</p>
-                <a id="initial-button" href="vistas/login.php" class="btn-get-started" style="visibility: visible; animation-name: fadeInUp;">Iniciar Sesión</a>
+                <?php                
+                session_start();
+                if($_SESSION['login']){
+                    ?> 
+                    <a id="initial-button" href="vistas/menu.php" class="btn-get-started" style="visibility: visible; animation-name: fadeInUp;">Ingresar al panel de administración</a>
+                    <?php
+                }else{
+                    ?> 
+                    <a id="initial-button" href="vistas/login.php" class="btn-get-started" style="visibility: visible; animation-name: fadeInUp;">Iniciar Sesión</a>
+                    <?php
+                }
+                ?>                
             </div>
         </section>
     </div>

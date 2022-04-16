@@ -102,7 +102,9 @@ function enviarAjax(datos, accion) {
                     title: res.msn,
                     showConfirmButton: false,
                     timer: 1500
-                })             
+                }).then(function() {
+                    window.location = "menu.php";
+                });             
             }
             $("#btn-acceder").prop("disabled", false);
             $("#btn-acceder").val("Acceder");

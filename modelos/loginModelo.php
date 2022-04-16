@@ -11,6 +11,7 @@ class LoginModelo
 	static public function mdlIniciarSesion($tabla, $datos)
 	{
         $db = new Conexion();
+        
         /* verificar identificacion */
         $stmt = $db->pdo->prepare("SELECT * FROM $tabla WHERE  identificacion = :identificacion  ");
         $stmt->bindParam(":identificacion", $datos["user"], PDO::PARAM_INT);
@@ -22,12 +23,12 @@ class LoginModelo
             if(password_verify($datos["pass"],$info['password'])){
                 //si todo salio bien 
                 //crear variables de sesion
-                // Iniciar la sesión
-                /* session_start();    
+                session_start();    
                 $_SESSION['id'] = $info['id'];
                 $_SESSION['nombre'] = $info['nombres'];
-                $_SESSION['apellido_paterno'] = $info['papellido_paterno'];
-                $_SESSION['login'] = true; */
+                $_SESSION['apellido_paterno'] = $info['apellido_paterno'];
+                $_SESSION['login'] = true;
+
                 $res = array(
                     'code' => '200',
                     'msn' => 'Bienvenid@ '.$info['nombres'].' '.$info['apellido_paterno'],

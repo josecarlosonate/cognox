@@ -1,3 +1,10 @@
+<?php
+require_once "../includes/funciones.php";
+session_start();
+if(isset($_SESSION['login'])) {
+    header('Location: menu.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 

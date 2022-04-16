@@ -1,3 +1,8 @@
+<?php
+require_once "../includes/funciones.php";
+session_start();
+isAuth();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,6 +26,9 @@
         <a id="navMenu" class="navbar-brand" href="/">
             AppBank
         </a>
+        <div class="float-right pr-5">
+            <p class="text-white"><?php echo $_SESSION['nombre'].' '.$_SESSION['apellido_paterno'] ?></p>            
+        </div>
     </nav>
     <div id="wave" style="height: 150px; overflow: hidden;">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -43,7 +51,7 @@
                         <a data-toggle="tooltip" data-placement="right" title="Envíe dinero a otras cuentas"
                             href="">
                             <img src="../vistas/img/paying.png" alt="">
-                            Realizar transferencias
+                            Transacciones Bancarias
                         </a>
                     </div>
                     <div class="option col-md-3 Registro en línea">
