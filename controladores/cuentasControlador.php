@@ -43,4 +43,14 @@ class CuentasControlador {
         
     }
 
+    /*=============================================
+	OBTENER CUENTAS DE USUARIO HABILITADAS PARA TRNSACCIONES DE TERCEROS
+	=============================================*/
+    static public function ctrMostrarcuentashabilitadasterceros($idUser){
+
+        $tabla = "cuentas";
+        return CuentasModelo::mdlMostrarcuentashabilitadasterceros($tabla,$idUser);
+        
+    }
+
 }

@@ -87,4 +87,14 @@ if(isset($_POST["accion"])){
             echo json_encode($res);
         }
     }
+
+    //trasferir a cuentas terceros
+    if($_POST["accion"] == 'transferirTercero'){
+        
+        $Data = json_decode($_POST['data'],true);
+        $res = TransaccionesControlador::ctrGuardartransaccionesterceros($Data);  
+        echo json_encode($res);
+        
+    }
+
 }
