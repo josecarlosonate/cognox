@@ -43,7 +43,7 @@ if(isset($_POST["accion"])){
         }
         
         //validaciones expresion regular
-        if(preg_match('/^[a-zA-Z0-9]+$/', $Data['numeroCuenta'])){
+        if(preg_match('/^[a-zA-Z0-9-]+$/', $Data['numeroCuenta'])){
             //si pasa las validaciones
             $res = CuentasControlador::ctrCrearcuenta($Data);
             echo json_encode($res);

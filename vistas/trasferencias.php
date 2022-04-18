@@ -13,7 +13,7 @@ isAuth();
     <meta name="title" content="pruena tecnica">
     <meta name="description" content="realizacion de prueba php">
     <meta name="keyword" content="prueba tecnica, php">
-    <title>Menu</title>
+    <title>Transacciones Bancarias</title>
     <!--=====================================
 	HOJA DE CSS 
 	======================================-->
@@ -22,7 +22,7 @@ isAuth();
 </head>
 
 <body>
-    <nav class="navbar menu">
+    <nav class="navbar menu" aria-label="">
         <a id="navMenu" class="navbar-brand" href="/">
             AppBank
         </a>
@@ -37,34 +37,30 @@ isAuth();
     </div>
     <div class="container">
         <div class="infoPrincipal">
-            <h1>Panel de Administración</h1>
+            <!--=====================================
+            MIGAS DE PAN
+            ======================================-->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="menu.php">Administración</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Transacciones Bancarias</li>
+                </ol>
+            </nav>
+            <h1>Transacciones Bancarias</h1>
             <div class="modContent">
                 <div class="menuAdmin nav nav-pills">
                     <div class="option col-md-3 Administración">
-                        <a data-toggle="tooltip" data-placement="right" title="Registrar cuentas propias"
-                            href="nuevaCuenta.php">
-                            <img src="../vistas/img/register.png" alt="">
-                            Registrar cuenta
+                        <a data-toggle="tooltip" data-placement="right" title="Transacciones Bancarias cuentas propias"
+                            href="propias.php">
+                            <img src="../vistas/img/tras.png" alt="">
+                            A cuentas propias
                         </a>
                     </div>
                     <div class="option col-md-3 Estampillas">
-                        <a data-toggle="tooltip" data-placement="right" title="Envíe dinero a otras cuentas"
-                            href="trasferencias.php">
-                            <img src="../vistas/img/paying.png" alt="">
-                            Transacciones Bancarias
-                        </a>
-                    </div>
-                    <div class="option col-md-3 Registro en línea">
-                        <a  data-toggle="tooltip" data-placement="right" title="Visualizar el historial de transferencias realizadas"
-                            href="reporte.php">
-                            <img src="../vistas/img/report.png" alt="">
-                            Reporte de transferencias
-                        </a>
-                    </div>
-                    <div class="option col-md-3">
-                        <a href="../includes/salir.php">
-                            <img src="../vistas/img/salir.png" alt="">
-                            Salir
+                        <a data-toggle="tooltip" data-placement="right" title="Transacciones Bancarias a otras cuentas"
+                            href="terceros.php">
+                            <img src="../vistas/img/money-transfer.png" alt="">
+                            A cuentas de terceros
                         </a>
                     </div>
                 </div>

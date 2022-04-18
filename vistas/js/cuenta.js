@@ -1,16 +1,10 @@
 $(document).ready(function() {
     //metodo alfanumerico
     $.validator.addMethod("alfanum", function(value, element) {
-        let expresion = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
+        let expresion = /^[a-zA-Z0-9- ]*$/;
         return expresion.test(value);
     });
 
-    $('#lstCuentasx').DataTable({
-        "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-        },
-        "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
-    });
 
     //validar formulario de registro de cuenta
     $("#formCuenta").validate({
