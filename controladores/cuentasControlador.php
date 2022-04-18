@@ -23,4 +23,14 @@ class CuentasControlador {
         
     }
 
+    /*=============================================
+	CAMBIO ESTADO CUENTA 
+	=============================================*/
+    static public function ctrEstadocuenta($id,$estado){
+
+        $tabla = "cuentas";
+        return CuentasModelo::mdlEstadocuenta($tabla,$id,$estado);
+        
+    }
+
 }

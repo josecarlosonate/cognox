@@ -8,7 +8,13 @@ class CuentasModelo
 	OBTENER CUENTAS DE USUARIO
 	=============================================*/
     static public function mdlMostrarcuentas($tabla,$idUser){
-        return false;
+
+        $db = new Conexion();
+        $stmt = $db->pdo->prepare("SELECT * FROM $tabla WHERE  usuario_id = :usuario_id ");
+        $stmt->bindParam(":usuario_id", $idUser, PDO::PARAM_INT);
+		$stmt->execute();
+
+        return $stmt -> fetchAll();
     }
 
     /*=============================================
@@ -49,6 +55,25 @@ class CuentasModelo
             );
         }
         return $res;
+    }
+
+    /*=============================================
+	CAMBIO ESTADO CUENTA 
+	=============================================*/
+    static public function mdlEstadocuenta($tabla,$id,$estado){
+
+        $db = new Conexion();
+        $stmt = $db->pdo->prepare("UPDATE $tabla SET estado = :estado WHERE id = :id");
+
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+		$stmt->bindParam(":estado", $estado, PDO::PARAM_INT);
+		$nReg = $stmt->execute();
+
+		if ($nReg > 0) {
+			return 'ok';
+		} else {
+			return 'error';
+		}
     }
 
 }

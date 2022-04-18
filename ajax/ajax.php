@@ -56,4 +56,15 @@ if(isset($_POST["accion"])){
             echo json_encode($res);
         }
     }
+
+    //listar cuentas
+    if($_POST["accion"] == 'lstCuentas'){
+        $res = CuentasControlador::ctrMostrarcuentas($_POST['id']);
+        echo json_encode($res);
+    }
+
+    //cambiar estado de cuenta
+    if($_POST["accion"] == 'estadoCuenta'){
+        echo CuentasControlador::ctrEstadocuenta($_POST['id'],$_POST['estado']);
+    }
 }

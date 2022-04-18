@@ -115,6 +115,31 @@ isAuth();
                                     </tr>
                                 </thead>
                                 <tbody id="listadoCuentas">
+                                    <?php
+                                        $cont =1;
+                                        foreach ($cuentas as $key => $valor) {?>
+                                        <tr>
+                                            <td><?= $cont ?></td>
+                                            <td><?= $valor['numero'] ?></td>
+                                            <td>$ <?= number_format($valor['valor'], 2, ',','.') ?></td>
+                                            <td><?= $valor['estado'] == '1' ? 'Habilitada':'Deshabilitada' ?></td>
+                                            <td>                                              
+                                                <?php
+                                                    if($valor['estado'] == '1'){
+                                                        ?>
+                                                        <button type="button" id="btnDeshabilitar" class="btn btn-danger">Deshabilitar</button>
+                                                        <?php
+                                                    }else{
+                                                        ?>
+                                                        <button type="button" id="habilitar" class="btn btn-primary">Habilitar</button>
+                                                        <?php
+                                                    }
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    <?php 
+                                        $cont++; 
+                                        } ?>
                                 </tbody>
                             </table>
                         <?php
