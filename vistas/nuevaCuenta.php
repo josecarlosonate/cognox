@@ -45,29 +45,29 @@ isAuth();
             ======================================-->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="menu.php">Menu</a></li>
+                    <li class="breadcrumb-item"><a href="menu.php">Administración</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Registrar nueva cuenta</li>
                 </ol>
             </nav>
             <h1>Registrar nueva cuenta</h1>
             <div class="modContent">
                 <div class="container">
-                    <form action="" method="post">
+                    <form id="formCuenta" action="" method="post">
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Numero</span>
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">Numero cuenta *</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <input name="numeroCuenta" id="numeroCuenta" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Monto</span>
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">Monto *</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <input name="monto" id="monto" type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -75,7 +75,7 @@ isAuth();
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroup-sizing-sm">Estado</span>
                                     </div>
-                                    <select name="" id="" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <select name="estado" id="estado" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                                         <option value="1" default>Habilitado</option>
                                         <option value="0">Inactivo</option>
                                     </select>
@@ -83,7 +83,8 @@ isAuth();
                             </div>
                             <div class="col-lg-2">
                                 <div class="input-group input-group-sm mb-3">
-                                    <input id="btn-acceder" type="submit" class="btn btn-outline-success btn-sm" value="Registar Cuenta">
+                                    <input type="hidden" name="idUser" id="idUser" value="<?= $_SESSION['id'] ?>">
+                                    <input id="btn-cuenta" type="submit" class="btn btn-outline-success btn-sm" value="Registar Cuenta">
                                 </div>
                             </div>
                         </div>

@@ -147,6 +147,11 @@ legend {
     font-size: 0.9em;
 }
 
+.login a{
+    text-decoration: none;
+    color: #1d976c;
+}
+
 .login .col-md-12 {
     padding: 0;
 }
@@ -243,4 +248,9 @@ nav a#navMenu{
 .fondoBreadcrumb{
 	margin-bottom:0px;
 	background: rgba(0,0,0,0);
+}
+
+/* label error de formcuenta */
+#formCuenta label.error{
+    width: inherit;
 }

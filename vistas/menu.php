@@ -41,7 +41,7 @@ isAuth();
             <div class="modContent">
                 <div class="menuAdmin nav nav-pills">
                     <div class="option col-md-3 Administración">
-                        <a data-toggle="tooltip" data-placement="right" title="Registrar cuentas propias o de terceros"
+                        <a data-toggle="tooltip" data-placement="right" title="Registrar cuentas propias"
                             href="nuevaCuenta.php">
                             <img src="../vistas/img/register.png" alt="">
                             Registrar cuenta
@@ -62,7 +62,7 @@ isAuth();
                         </a>
                     </div>
                     <div class="option col-md-3">
-                        <a href="logout.php">
+                        <a href="../includes/salir.php">
                             <img src="../vistas/img/salir.png" alt="">
                             Salir
                         </a>

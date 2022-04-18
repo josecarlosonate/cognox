@@ -28,7 +28,7 @@ if(isset($_SESSION['login'])) {
         <div class="login text-center">
             <form name="formLogin" id="formLogin" method="POST" action="" class="form-horizontal formLogin" novalidate="novalidate">
                 <fieldset>
-                    <legend>Datos ingreso al sistema de <strong style="font-weight: bold;">AppBank</strong></legend>
+                    <legend>Datos ingreso al sistema de <a href="/"><strong style="font-weight: bold;">AppBank</strong></a></legend>
                     <div class="form-group valid">
                         <label class="control-label" for="loginUsuario">Identificación *</label>
                         <div class="col-md-12">

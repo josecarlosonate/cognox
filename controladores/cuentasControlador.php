@@ -12,4 +12,15 @@ class CuentasControlador {
         return CuentasModelo::mdlMostrarcuentas($tabla,$idUser);
         
     }
+
+    /*=============================================
+	CREAR CUENTA DE USUARIO
+	=============================================*/
+    static public function ctrCrearcuenta($data){
+
+        $tabla = "cuentas";
+        return CuentasModelo::mdlCrearcuenta($tabla,$data);
+        
+    }
+
 }
