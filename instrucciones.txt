@@ -1,0 +1,24 @@
+pasos para ejecutar el sistema.
+
+1-clonar o descargar el proyecto  que se encuentra en el siguiente repositorio https://github.com/josecarlosonate/cognox
+2-asegurese de estar ubicado dentro de la carpeta del servidor local, si usted utiliza
+	xampp     la ruta sera: "C:/xampp/htdocs",
+	wampserver la rura sera: "c:/wamp/www",
+	laragon   la ruta sera: "c:/laragon/www"
+  el archivo que descargo en el paso 1 debe quedar copiado y descomprimido en alguna de estas rutas dependiendo 
+  de su servidor local. 
+3-dentro del archivo descargado a una carpeta con el nombre de BD esta carpeta contiene la base de datos.
+4-por favor dirijase a su administrador de base de datos, en mi caso use PhpMyAdmin.
+5-una vez dentro de PhpMyAdmin cree una nueva base de datos con el nombre de appbank.
+6-dentro de la base de datos creada en PhpMyAdmin dirijase a la opcion de importar y seleccione el archivo appbank.sql 
+  que se encuentra en la ruta del paso 3.
+7-si la importacion de la base de datos fue exitosa econtrara 3 tablas
+  puede iniciar sesion con los siguientes usuarios
+  usuario uno
+  identificacion:1000000001
+  contraseña:1234
+  
+  usuario dos
+  identificacion:1000000002
+  contraseña:2211
+  
