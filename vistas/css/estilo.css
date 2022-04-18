@@ -251,6 +251,6 @@ nav a#navMenu{
 }
 
 /* label error de formcuenta */
-#formCuenta label.error{
+#formCuenta label.error,#formPropias label.error{
     width: inherit;
 }

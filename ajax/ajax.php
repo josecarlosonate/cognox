@@ -1,6 +1,7 @@
 <?php
 require_once "../controladores/loginControlador.php";
 require_once "../controladores/cuentasControlador.php";
+require_once "../controladores/transaccionesControlador.php";
 
 /* recibir accion */
 if(isset($_POST["accion"])){
@@ -66,5 +67,24 @@ if(isset($_POST["accion"])){
     //cambiar estado de cuenta
     if($_POST["accion"] == 'estadoCuenta'){
         echo CuentasControlador::ctrEstadocuenta($_POST['id'],$_POST['estado']);
+    }
+
+    //trasferir a cuentas propias
+    if($_POST["accion"] == 'transferirPropia'){
+        
+        $Data = json_decode($_POST['data'],true);
+
+        //Cuenta Origen y Cuenta destino iguales
+        if($Data['corigen'] == $Data['cdestino']){
+            $res = array(
+                'code' => '002',
+                'msn' => '¡El sistema detecta que la cuenta de origen y la cuenta de destino son iguales  deben ser distintas!',
+                'info' => $Data
+            );
+            echo json_encode($res);
+        }else{
+            $res = TransaccionesControlador::ctrGuardartransaccionespropias($Data);  
+            echo json_encode($res);
+        }
     }
 }

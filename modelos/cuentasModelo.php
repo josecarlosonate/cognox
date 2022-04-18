@@ -76,4 +76,17 @@ class CuentasModelo
 		}
     }
 
+    /*=============================================
+	OBTENER CUENTAS DE USUARIO HABILITADAS PARA TRNSACCIONES
+	=============================================*/
+    static public function mdlMostrarcuentashabilitatas($tabla,$idUser){
+
+        $db = new Conexion();
+        $stmt = $db->pdo->prepare("SELECT * FROM $tabla WHERE  usuario_id = :usuario_id AND estado = 1");
+        $stmt->bindParam(":usuario_id", $idUser, PDO::PARAM_INT);
+		$stmt->execute();
+
+        return $stmt -> fetchAll();
+    }
+
 }

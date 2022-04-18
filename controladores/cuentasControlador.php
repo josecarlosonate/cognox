@@ -33,4 +33,14 @@ class CuentasControlador {
         
     }
 
+    /*=============================================
+	OBTENER CUENTAS DE USUARIO HABILITADAS PARA TRNSACCIONES
+	=============================================*/
+    static public function ctrMostrarcuentashabilitadas($idUser){
+
+        $tabla = "cuentas";
+        return CuentasModelo::mdlMostrarcuentashabilitatas($tabla,$idUser);
+        
+    }
+
 }

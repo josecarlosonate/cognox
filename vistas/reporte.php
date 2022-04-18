@@ -86,7 +86,7 @@ isAuth();
                                             <td><?= $valor['numeroDestino'] ?></td>
                                             <td>$ <?= number_format($valor['monto'], 2, ',','.') ?></td>
                                             <td><?= date('d/m/Y h:i a', $valor['fecha']) ?></td>
-                                            <td><?= $valor['tipo'] == '1' ? 'A cuenta propia':'A cuenta tercero' ?></td>
+                                            <td><?= $valor['tipo_trans'] == '1' ? 'A cuenta propia':'A cuenta tercero' ?></td>
                                         </tr>
                                     <?php 
                                         $cont++; 

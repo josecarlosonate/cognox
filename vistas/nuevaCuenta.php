@@ -84,7 +84,7 @@ isAuth();
                             <div class="col-lg-2">
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="hidden" name="idUser" id="idUser" value="<?= $_SESSION['id'] ?>">
-                                    <input id="btn-cuenta" type="submit" class="btn btn-outline-success btn-sm" value="Registar Cuenta">
+                                    <input id="btn-cuenta" type="submit" class="btn btn-success btn-sm" value="Registar Cuenta">
                                 </div>
                             </div>
                         </div>

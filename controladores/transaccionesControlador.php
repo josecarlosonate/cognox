@@ -13,4 +13,15 @@ class TransaccionesControlador {
         
     }
 
+    /*=============================================
+	REALIZAR TRANSACCIONES CUENTAS PROPIAS
+	=============================================*/
+    static public function ctrGuardartransaccionespropias($data){
+
+        $tabla = "transacciones";
+        $tablaC = "cuentas";
+        return TransaccionesModelo::mdlGuardartransaccionespropias($tablaC,$tabla,$data);
+        
+    }
+
 }
